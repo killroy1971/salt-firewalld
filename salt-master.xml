@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Salt-Master</short>
+  <description>Salt Master is the server part of a Saltstack system.</description>
+  <port protocol="tcp" port="4505"/>
+  <port protocol="tcp" port="4506"/>
+</service>
+
