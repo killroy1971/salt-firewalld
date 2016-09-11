@@ -1,0 +1,12 @@
+This contains a simple firewalld xml file to define a salt-master service.
+To use it: 
+
+  1. Place the .xml file into /etc/firewalld/services.
+  2. Reload the firewall service:  firewall-cmd reload
+  3. Check for the salt-mater service's availability: firewall-cmd --get-services
+  4. If it isn't listed, restart firewalld: systemctl restart firewalld
+  5. Add the salt-master service: firewall-cmd --permanent --add-service salt-master
+  6. Reload the firewall configuration to activate: firewall-cmd --reload
+  7. Confirm the salt-master firewall service activation: firewall-cmd --list-services
+
+It works on my humble salt master VM. I'm sure Saltstack will add this to future releases.
